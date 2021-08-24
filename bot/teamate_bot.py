@@ -74,7 +74,7 @@ def TMtask_button(update, context):
 
 def main() -> None:
 
-    updater = Updater("1924179906:AAGKcIJne3XUNGwXMbehL05LSnlib4GOSj4")
+    updater = Updater("Your Token")
     dispatcher = updater.dispatcher
 
     # on different commands - answer in Telegram
