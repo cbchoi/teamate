@@ -25,7 +25,7 @@ def get_mgs(update: Update, context: CallbackContext) -> None:
     # print(update.message.chat_id)
     # print(update.effective_user.id)
     print("fifi")
-    TEAMateclient = MongoClient('mongodb://syhan:0220171631@127.0.0.1:27017/TM_db')
+    TEAMateclient = MongoClient("your localhost")
     TEAMateDB = TEAMateclient["TM_db"]
   
     #"groupname" : update.message.chat.title,
