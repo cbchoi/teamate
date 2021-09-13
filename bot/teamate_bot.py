@@ -25,7 +25,7 @@ def get_mgs(update: Update, context: CallbackContext) -> None:
     # print(update.message.chat_id)
     # print(update.effective_user.id)
     print("fifi")
-    TEAMateclient = MongoClient('mongodb://syhan:0220171631@127.0.0.1:27017/TM_db')
+    TEAMateclient = MongoClient("your localhost")
     TEAMateDB = TEAMateclient["TM_db"]
   
     #"groupname" : update.message.chat.title,
@@ -74,7 +74,7 @@ def TMtask_button(update, context):
 
 def main() -> None:
 
-    updater = Updater("1924179906:AAGKcIJne3XUNGwXMbehL05LSnlib4GOSj4")
+    updater = Updater("Your Token")
     dispatcher = updater.dispatcher
 
     # on different commands - answer in Telegram
