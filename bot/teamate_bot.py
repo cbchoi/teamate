@@ -20,15 +20,6 @@ logger = logging.getLogger(__name__)
 
 
 
-#doc = gc.open_by_url(spreadsheet_url)
-#worksheet = doc.worksheet('시트1')
-#stu_list_df = worksheet.get_as_df()
-###
-#웹앱배포 url
-#"https://script.google.com/macros/s/AKfycbyGTAsnZrTgh4MqeVdZI-z52DFPG0_ufHdS-uj_rjwVVnmVkw7d7Syoa1DXzm-q93K-/exec"
-# 배포아이디
-#AKfycbyGTAsnZrTgh4MqeVdZI-z52DFPG0_ufHdS-uj_rjwVVnmVkw7d7Syoa1DXzm-q93K-
-
 def update_dataframe():
     #wks = doc.worksheet('timestamp','group_id','user_chatid','msg')
     df = pd.DataFrame('', index=[], columns=[])
@@ -57,8 +48,7 @@ def current_score(update: Update, context: CallbackContext) -> None:
     else:
         context.bot.send_message(chat_id=update.message.chat_id,text=f"{update.effective_user.first_name}님의 참여도 색은 ___입니다.")
 
-    #TM_analysis(update.message.chat_id,update.effective_user.id)
-    #context.bot.send_message
+
 def collect_msg(update: Update, context: CallbackContext) -> None:
 
     
@@ -77,13 +67,8 @@ def collect_msg(update: Update, context: CallbackContext) -> None:
     wks.update_value('C' + str(len(stu_list_df)+2), update.effective_user.id)        
     wks.update_value('D' + str(len(stu_list_df)+2), preprocessing_chat)
 
-    #"groupname" : update.message.chat.title,
-    #"username" :update.message.from_user['first_name'],
-    #TMchat_line = {"datetime" : update.message.date,
-    #                "group_id" : update.message.chat_id, 
-    #                "user_chatid" : update.effective_user.id,
-    #                "text": update.message.text
-    #            }
+
+
     
     print("success")
 
