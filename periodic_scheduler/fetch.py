@@ -86,4 +86,4 @@ class Fetch(BehaviorModelExecutor):
     def int_trans(self):
         self._cur_state = "PROCESS"
 
-#git
+#git .
