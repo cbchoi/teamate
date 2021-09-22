@@ -53,7 +53,6 @@ def collect_msg(update: Update, context: CallbackContext) -> None:
 
     
 
-    print("collect")
     print(update.message.text)
 
     gc = pygsheets.authorize(service_file=GOOGLE_SERVICE_KEY)
@@ -68,9 +67,6 @@ def collect_msg(update: Update, context: CallbackContext) -> None:
     wks.update_value('D' + str(len(stu_list_df)+2), preprocessing_chat)
 
 
-
-    
-    print("success")
 
 
 def main() -> None:
